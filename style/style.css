@@ -1,0 +1,63 @@
+body, html {
+    padding: 0;
+    margin: 0; 
+}
+
+header {
+    width: 100vw;
+    height: 120px;
+    position: fixed;
+    box-shadow: 10px 10px 10px lightgray;
+}
+
+#first-header {
+    width: 100vw;
+    height: 30px;
+    background-color: #212121;
+    color: #ffffff;
+    display: flex;
+    flex-direction: row-reverse;
+}
+
+#login-account {
+    width: 300px;
+    height: inherit;
+    align-items: center;
+    display: flex;
+    justify-content: space-around;
+    
+}
+
+.font-h {
+    font-weight: bolder;
+    font-size: 12px;
+    font-family: sans-serif;
+    color: #ffffff;
+    text-decoration: none;
+}
+.font-h:hover {
+    text-decoration: underline;
+}
+#second-header {
+    width: 100vw;
+    height: 100px;
+    display: flex;
+}
+#left-side-header {
+    width: 50%;
+    display: flex;
+    align-items: center;
+}
+#right-side-header {
+    width: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+.gfont {
+    font-family: 'Aclonica';
+    font-size: 45px;
+    font-weight: bolder;
+    margin-left: 100px;
+    cursor: pointer;
+}
