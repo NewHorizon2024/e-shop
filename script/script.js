@@ -12,8 +12,13 @@ logoShop.onclick = () => {
 }
 
 const loginUser = document.getElementsByClassName('font-h')[0];
+const loginFormat = document.getElementsByClassName('login-user')[0];
+
 loginUser.onclick = () => {
-    const loginFormat = document.getElementsByClassName('login-user')[0];
     loginFormat.classList.toggle('open-login');
 }
 
+const userCancel = document.getElementsByClassName('cancel')[0];
+userCancel.onclick = () => {
+    loginFormat.classList.remove('open-login');
+}

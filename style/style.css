@@ -96,7 +96,7 @@ header {
     justify-content: space-around;
 }
 .login-user {
-    width: 330px;
+    width: 350px;
     height: 250px;
     display: none;
     flex-direction: column;
@@ -108,6 +108,8 @@ header {
     margin: auto;
     justify-content: space-around;
     background-color: #ffffff;
+    border-bottom: 2px solid black;
+    
 }
 .inputs {
     width: 100%;
@@ -168,4 +170,8 @@ header {
 }
 .open-login {
     display: flex;
+}
+.remember {
+    color: #212121;
+    font-family: 'Alegreya Sans';
 }
