@@ -1,6 +1,7 @@
 body, html {
     padding: 0;
     margin: 0; 
+    
 }
 
 header {
@@ -64,12 +65,17 @@ header {
 .head-item {
     cursor: pointer;
 }
-#header-menu {
+.header-menu {
     width: 100vw;
     position: fixed;
-    display: flex;
+    display: none;
     justify-content: center;
 }
+.open-menu {
+    display: flex;
+}
+
+
 .vertical {
     width: 80%;
     height: auto;
@@ -88,5 +94,78 @@ header {
     width: 80vw;
     display: flex;
     justify-content: space-around;
-    
+}
+.login-user {
+    width: 330px;
+    height: 250px;
+    display: none;
+    flex-direction: column;
+    position: fixed;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    top: 0;
+    margin: auto;
+    justify-content: space-around;
+    background-color: #ffffff;
+}
+.inputs {
+    width: 100%;
+    height: 30px;
+    border: 1px solid black;
+    border-radius: 3px;
+    padding: 5px;
+}
+.inputs:focus {
+    box-shadow: 2px 2px 5px 2px #E5E4E2;
+}
+.login-header {
+    width: 100%;
+    text-align: center;
+}
+.signin {
+    width: 100%;
+    height: 30px;
+    background-color: black;
+    padding: 5px;
+    color: #ffffff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family:  'Alegreya Sans';
+    font-size: 18px;
+    cursor: pointer;
+}
+.login-header {
+    font-family:  'Alegreya Sans';
+    font-size: 30px;
+}
+.optionss {
+    width: 100%;
+    height: 30px;
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: nowrap;
+}
+.options-left {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Alegreya Sans';
+    width: 100%;
+}
+.options-right {
+    display: flex;
+    font-family: 'Alegreya Sans';
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 30px;
+}
+.options-link {
+    text-decoration: none;
+    color: #212121;
+}
+.open-login {
+    display: flex;
 }
