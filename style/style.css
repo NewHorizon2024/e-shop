@@ -7,7 +7,7 @@ header {
     width: 100vw;
     height: 120px;
     position: fixed;
-    box-shadow: 10px 10px 10px lightgray;
+    box-shadow: 10px 10px 10px #ffffff;
 }
 
 #first-header {
@@ -60,4 +60,33 @@ header {
     font-weight: bolder;
     margin-left: 100px;
     cursor: pointer;
+}
+.head-item {
+    cursor: pointer;
+}
+#header-menu {
+    width: 100vw;
+    position: fixed;
+    display: flex;
+    justify-content: center;
+}
+.vertical {
+    width: 80%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.vertical-item {
+    text-decoration: none;
+    color: #848482;
+    margin: 10px;
+    height: auto;
+    font-family: 'Alegreya Sans';
+}
+#content-menu {
+    width: 80vw;
+    display: flex;
+    justify-content: space-around;
+    
 }
