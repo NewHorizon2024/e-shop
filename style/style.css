@@ -1,6 +1,7 @@
 body, html {
     padding: 0;
     margin: 0; 
+    overflow-x: hidden;
     
 }
 
@@ -9,6 +10,7 @@ header {
     height: 120px;
     position: fixed;
     box-shadow: 10px 10px 10px #ffffff;
+    z-index: 2;
 }
 
 #first-header {
@@ -43,6 +45,7 @@ header {
     width: 100vw;
     height: 100px;
     display: flex;
+    background-color: #ffffff;
 }
 #left-side-header {
     width: 50%;
@@ -70,6 +73,7 @@ header {
     position: fixed;
     display: none;
     justify-content: center;
+    background-color: #ffffff;
 }
 .open-menu {
     display: flex;
@@ -109,6 +113,7 @@ header {
     justify-content: space-around;
     background-color: #ffffff;
     border-bottom: 2px solid black;
+    z-index: 3;
 }
 .backLamp {
     background-color: rgba(0,0,0, 0.4);
@@ -116,7 +121,8 @@ header {
 .inputs {
     width: 339px;
     height: 30px;
-    border: 1px solid black;
+    border: 0px;
+    border-bottom: 2px solid black;
     border-radius: 3px;
     padding: 5px;
     outline: 0;
@@ -320,4 +326,42 @@ header {
 }
 .fa-key {
     color: #54C571;
+}
+
+.sec_1 {
+    width: 100vw;
+    height: 100%;
+    position: absolute;
+    background-image: url('https://cdn.wallpapersafari.com/9/73/IAqCsZ.jpg');
+    margin-top: 130px;
+    z-index: 1;
+    background-attachment: fixed;
+    background-size: cover;
+   
+}
+.layout_prod {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    background-attachment: fixed;
+}
+.relase {
+    display: flex;
+    width: 300px;
+    height: 200px;
+    color: #ffffff;
+    flex-direction: column;
+    background-attachment: fixed;
+    font-family: 'Allan';
+    font-size: 50px;
+    bottom: 0;
+    margin: auto;
+    margin-left: 50px;
+}
+.shop-now {
+    color: #ffffff;
+}
+.sec_2 {
+    width: 100vw;
+    height: 900px;
 }
