@@ -5,9 +5,157 @@
         <link rel = 'stylesheet' href = 'style/style.css' type = 'text/css'/>
         <link href='https://fonts.googleapis.com/css?family=Aclonica' rel='stylesheet'>
         <link href='https://fonts.googleapis.com/css?family=Alegreya Sans' rel='stylesheet'>
-        <script defer type = 'text/javascript' src = 'script/script.js'></script>
+        <script src="https://kit.fontawesome.com/7d2d0643b6.js" crossorigin="anonymous"></script>
     </head>
     <body>
+        <div class = 'main-form'>
+            <div class = 'top-back'>
+                <div class = 'left-corner'>
+                    <i class="far fa-arrow-alt-circle-left fa-3x"></i>
+                </div>
+            </div>
+            <div class = 'main-content'>
+                <div class ='gif'>
+                    <!--<img src = 'https://pixelpapa.com/wp-content/uploads/2018/11/26.gif' class = 'gif-loading'>-->
+                    <i class="fas fa-lock fa-3x fixer"></i>
+                </div>
+                <div class ='reset-form'>
+                    <div class = 'intro-header'>
+                        <span class = 'intro-word'>Forgot your password ?</span>
+                    </div>
+                    <div class = 'user-message'>
+                        <span class = 'intro-msg'>
+                            Dont't worry, just enter your email address we'll send
+                            you up with a new password in on time. You can then change it in the dashboard.
+                        </span>
+                    </div>
+                    <div class = 'email-add'>
+                        <a href = '#' class = 'address'>EMAIL ADDRESS</a>
+                    </div>
+                    <div class ='email-input'>
+                        <input type ='email' placeholder = 'Email' class ='email-r' /><br>
+                        <span id = 'user-alert'></span>
+                    </div>
+
+                    <div class ='user-btn'>
+                        <div class ='btn-reset'>Reset Password</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <template id = 'user-insta'>
+            <div class = 'msg'>
+                <span id = 'fonta'>
+                If this email exists in our database we've sent you instructions
+                on how to reset your password. If you somehow didn't receive that email
+                feel free to 
+                </span>
+                <div id = 'contacto'>
+                    <a href ='#'>Contact us</a>
+                </div>
+            </div>
+            <style>
+                .msg {
+                    width: 320px;
+                    height: auto;
+                    padding: 20px;
+                    border: 2px solid black;
+                    border-radius: 5px;
+                    font-family: 'Alegreya Sans';
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    flex-direction: column;
+                    
+                }
+                #fonta {
+                    width: 100%;
+                    height: auto;
+                }
+                #contacto {
+                    width: 100%;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+
+                }
+            </style>
+
+        </template>
+
+        <script>
+            const mainForm = document.getElementsByClassName('main-form')[0];
+const userResetBtn = document.getElementsByClassName('btn-reset')[0];
+function resetPassword() {
+    try {
+    const mainForm = document.getElementsByClassName('main-form')[0];
+    const formTemplate = document.getElementsByClassName('reset-form')[0];
+    const userInsta = document.getElementById('user-insta');
+    const userAlert = document.getElementById('user-alert');
+    const userInput = document.getElementsByClassName('email-r')[0];
+    const efel = document.getElementsByClassName('fixer')[0];
+    const urlLoad = 'https://pixelpapa.com/wp-content/uploads/2018/11/26.gif';
+    const imageZone = document.getElementsByClassName('gif')[0];
+    const postEmail = document.getElementById('email-hyd');
+    
+    
+    if (!userInput.value) {
+        userAlert.textContent = "* Please write your email";
+        return;
+    }
+    userAlert.textContent = '';
+    
+
+    // sending data to server and checking in database..
+    //trial ISOs
+    efel.remove();
+    let load = document.createElement('img');
+    load.src = urlLoad;
+    load.className = 'gif-loading';
+    imageZone.append(load);
+
+    let counter = 0;
+    let start = setInterval( () => {
+        counter++;
+        userResetBtn.classList.add('loading');
+        mainForm.style.cursor = 'wait';
+    
+        if (counter > 10) {
+            clearInterval(start);
+            userResetBtn.classList.remove('loading');
+            mainForm.style.cursor = '';
+            load.remove();
+            let mofta7 = document.createElement('i');
+            mofta7.classList.add('fas');
+            mofta7.classList.add('fa-key');
+            mofta7.classList.add('fa-3x');
+            imageZone.append(mofta7);
+            formTemplate.remove();
+            const h = document.createElement('h3');
+            h.textContent = userInput.value;
+            mainForm.append(h);
+            let content = userInsta.content.cloneNode(true);
+            mainForm.append(content);
+            mainForm.classList.add('serv-email');
+        }
+
+    }, 1000);
+} catch(err) {
+    alert(err.message);
+}
+    
+    
+}
+userResetBtn.addEventListener('click', resetPassword, false);
+
+
+    const home = document.getElementsByClassName('far')[0];
+    home.onclick = () => {
+        window.location.href = 'file:///C:/e-shop/index.html';
+    }
+
+   
+        </script>
 
 
 
@@ -16,6 +164,6 @@
 
 
 
-        
+
     </body>
 </html>
