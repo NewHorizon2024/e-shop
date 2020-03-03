@@ -16,9 +16,11 @@ const loginFormat = document.getElementsByClassName('login-user')[0];
 
 loginUser.onclick = () => {
     loginFormat.classList.toggle('open-login');
+    document.body.classList.toggle('backLamp');
 }
 
 const userCancel = document.getElementsByClassName('cancel')[0];
 userCancel.onclick = () => {
     loginFormat.classList.remove('open-login');
+    document.body.classList.remove('backLamp');
 }

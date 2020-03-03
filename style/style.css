@@ -109,14 +109,17 @@ header {
     justify-content: space-around;
     background-color: #ffffff;
     border-bottom: 2px solid black;
-    
+}
+.backLamp {
+    background-color: rgba(0,0,0, 0.4);
 }
 .inputs {
-    width: 100%;
+    width: 339px;
     height: 30px;
     border: 1px solid black;
     border-radius: 3px;
     padding: 5px;
+    outline: 0;
 }
 .inputs:focus {
     box-shadow: 2px 2px 5px 2px #E5E4E2;
@@ -126,7 +129,7 @@ header {
     text-align: center;
 }
 .signin {
-    width: 100%;
+    width: 340px;
     height: 30px;
     background-color: black;
     padding: 5px;
