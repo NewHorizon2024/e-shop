@@ -99,6 +99,7 @@ header {
     display: flex;
     justify-content: space-around;
 }
+
 .login-user {
     width: 350px;
     height: 250px;
@@ -185,6 +186,155 @@ header {
     font-family: 'Alegreya Sans';
 }
 
+.create-account-container {
+    position: fixed;
+    background-color: #ffffff;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    top: 0;
+    overflow-x: auto;
+    margin: auto;
+    z-index: 5;
+    height: 650px;
+    width: 950px;
+    display: none;
+    justify-content: center;
+    align-content: center;
+    grid-column-gap: 10px;
+    grid-row-gap: 10px;
+    grid-template-columns: repeat(13, 50px);
+    grid-template-rows: repeat(11, 50px);
+    grid-template-areas:
+    
+    ". . . . . symbolLogo symbolLogo symbolLogo . . . . ."
+    "createAcc createAcc createAcc createAcc . . asignLine . . signUp signUp signUp signUp"
+    ". . . . . . asignLine . . . . . ."
+    "firstName firstName firstName lastName lastName lastName asignLine facebookBtn facebookBtn facebookBtn facebookBtn . ."
+    "emailRegister emailRegister emailRegister emailRegister emailRegister emailRegister asignLine googleRegister googleRegister googleRegister googleRegister . ."
+    "password password password password password password asignLine . . . . . ."
+    ". . . . . . or . . . . . ."
+    ". . . . . . lineTwo . . . . . ."
+    ". . . . . . lineTwo . . . . . ."
+    ". . . . create create create create create . . . ."
+    ". . . . return return return login login . . . .";
+}
+
+
+.create-account {
+    grid-area: createAcc;
+}
+.symbol-logo {
+    grid-area: symbolLogo;
+}
+.sign-up {
+    grid-area: signUp;
+}
+.first-name {
+    grid-area: firstName;
+}
+.last-name {
+    grid-area: lastName;
+}
+.facebook-btn {
+    grid-area: facebookBtn;
+    background-color: #4267B2;
+    color: #ffffff;
+    font-family: 'Alegerya Sans';
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 20px;
+    cursor: pointer;
+}
+.email-register {
+    grid-area: emailRegister;
+}
+.google-btn {
+    grid-area: googleRegister;
+    background-color: #d34836;
+    color: #ffffff;
+    font-family: 'Alegerya Sans';
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 20px;
+    cursor: pointer;
+}
+.password-btn {
+    grid-area: password;
+}
+.or-word {
+    grid-area: or;
+    color: black;
+    font-family: 'Alegreya Sans';
+    font-size: 35px;
+}
+.create-btn {
+    grid-area: create;
+    background-color: black;
+    color: #ffffff;
+    font-family: 'Alegreya Sans';
+    font-size: 25px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+.return-link {
+    grid-area: return;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.login-link {
+    grid-area: login;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.asign-line-1 {
+    grid-area: asignLine;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.asign-line-2 {
+    grid-area: lineTwo;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.font-create {
+    font-family: 'Alegreya Sans';
+    font-size: 30px;
+}
+.reg-input {
+    width: 100%;
+    height: 100%;
+    border: 0px;
+    border-bottom: 2px solid;
+}
+.email-reg {
+    width: 100%;
+    height: 100%;
+    border: 0px;
+    border-bottom: 2px solid;
+}
+.reg-links{
+    font-family: 'Alegreya Sans';
+    cursor : pointer;
+}
+.amood {
+    width: 2px;
+    height: 100%;
+    background-color: black;
+}
+.open-reg {
+     display: inline-grid;
+ }
 
 
 
@@ -365,3 +515,9 @@ header {
     width: 100vw;
     height: 900px;
 }
+
+
+
+
+
+

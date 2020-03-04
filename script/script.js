@@ -24,3 +24,23 @@ userCancel.onclick = () => {
     loginFormat.classList.remove('open-login');
     document.body.classList.remove('backLamp');
 }
+
+const cancelReg = document.getElementsByClassName('cancel-reg')[0];
+const mainReg = document.getElementsByClassName('create-account-container')[0];
+
+cancelReg.onclick = () => {
+    mainReg.classList.remove('open-reg');
+}
+
+const userReg = document.getElementsByClassName('open-regis')[0];
+userReg.onclick = () => {
+    mainReg.classList.add('open-reg');
+}
+
+const loginFromReg = document.getElementsByClassName('login-link')[0];
+
+loginFromReg.onclick = () => {
+   // alert('hi');
+    mainReg.classList.remove('open-reg');
+    loginFormat.classList.add('open-login');
+}
