@@ -85,6 +85,7 @@
         </div>
         </div>
     </header>
+    
     <!--Log in section-->
     <div class = 'login-user'>
         <div class = 'login-header'>Login</div>
@@ -155,6 +156,37 @@
                 <div class = 'amood'></div>
             </div>
     </div>
+    <template id = 'product-template'>
+        <div class = 'product-box'>
+            <div class = 'product-photo'></div>
+            <div class = 'product product-name'></div>
+            <div class = 'product product-price'></div>
+        </div>
+        <style>
+            .product-box {
+                width: 300px;
+                height: 400px;
+                display: flex;
+                flex-direction: column;
+                border: 2px solid;
+            }
+            .product-photo {
+                height: 250px;
+                width: 100%;
+            }
+            .product {
+                width: 100%;
+                height: 30px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            }
+            .prdocut-name {
+                font-family: 'Alegreya Sans';
+                font-size: 20px;
+            }
+        </style>
+    </template>
     
     
 
@@ -168,7 +200,13 @@
             </div>
         </div>
     </section>
+    <!--Products section-->
     <section class = 'sec_2'>
+        <div class = 'products-container'>
+           <!--<div id = 'products-header'>Featured Products</div>--> 
+
+        </div>
+
         
     </section>
 

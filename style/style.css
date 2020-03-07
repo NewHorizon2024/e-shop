@@ -2,6 +2,7 @@ body, html {
     padding: 0;
     margin: 0; 
     overflow-x: hidden;
+    position: relative;
     
 }
 
@@ -478,17 +479,7 @@ header {
     color: #54C571;
 }
 
-.sec_1 {
-    width: 100vw;
-    height: 100%;
-    position: absolute;
-    background-image: url('https://cdn.wallpapersafari.com/9/73/IAqCsZ.jpg');
-    margin-top: 130px;
-    z-index: 1;
-    background-attachment: fixed;
-    background-size: cover;
-   
-}
+
 .layout_prod {
     width: 100%;
     height: 100%;
@@ -511,10 +502,38 @@ header {
 .shop-now {
     color: #ffffff;
 }
+
+.sec_1 {
+    width: 100vw;
+    height: 800px;
+    position: relative;
+    background-image: url('https://cdn.wallpapersafari.com/9/73/IAqCsZ.jpg');
+    z-index: 1;
+    background-attachment: fixed;
+    background-size: cover;
+   
+}
 .sec_2 {
     width: 100vw;
-    height: 900px;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
 }
+.products-container {
+    width: 90%;
+    height: auto;
+    display: flex;
+    justify-content: space-around;
+    
+}
+.resizeImage {
+    width: 300px;
+    height: 100%;
+}
+
+
 
 
 
