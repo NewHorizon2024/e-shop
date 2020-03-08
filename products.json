@@ -1,1 +1,88 @@
-
+[
+  
+  {
+    "productPhoto": "https://raw.githubusercontent.com/freelancer2020/e-shop/master/photos/sophia.jpg",
+    "productName": "Sophia",
+    "productPrice": "399$"
+  },
+  {
+    "productPhoto": "https://raw.githubusercontent.com/freelancer2020/e-shop/master/photos/marina.jpg",
+    "productName": "Marina",
+    "productPrice": "299$"
+  },
+  {
+    "productPhoto": "https://raw.githubusercontent.com/freelancer2020/e-shop/master/photos/linda.jpg",
+    "productName": "Linda",
+    "productPrice": "199$"
+  },
+  {
+    "productPhoto": "https://raw.githubusercontent.com/freelancer2020/e-shop/master/photos/marco.jpg",
+    "productName": "Marco",
+    "productPrice": "239$"
+  },
+  {
+    "productPhoto": "hhttps://raw.githubusercontent.com/freelancer2020/e-shop/master/photos/modern.jpg",
+    "productName": "Modern",
+    "productPrice": "1999$"
+  },
+  {
+    "productPhoto": "https://raw.githubusercontent.com/freelancer2020/e-shop/master/photos/barber.jpg",
+    "productName": "BarBer",
+    "productPrice": "50$"
+  },
+  {
+    "productPhoto": "https://raw.githubusercontent.com/freelancer2020/e-shop/master/photos/collection.jpg",
+    "productName": "Collection",
+    "productPrice": "199$"
+  },
+  {
+    "productPhoto": "https://raw.githubusercontent.com/freelancer2020/e-shop/master/photos/collection2.jpg",
+    "productName": "Collection 2",
+    "productPrice": "239$"
+  },
+  {
+    "productPhoto": "https://raw.githubusercontent.com/freelancer2020/e-shop/master/photos/jewe.jpg",
+    "productName": "Jewelery",
+    "productPrice": "399.99"
+  },
+  {
+    "productPhoto": "https://raw.githubusercontent.com/freelancer2020/e-shop/master/photos/kit.jpg",
+    "productName": "kit",
+    "productPrice": "44.99$"
+  },
+  {
+    "productPhoto": "https://raw.githubusercontent.com/freelancer2020/e-shop/master/photos/Antiques.jpg",
+    "productName": "Antiques",
+    "productPrice": "599$"
+  },
+  {
+    "productPhoto": "https://raw.githubusercontent.com/freelancer2020/e-shop/master/photos/gentle.jpg",
+    "productName": "Gentle",
+    "productPrice": "239$"
+  },
+  {
+    "productPhoto": "https://raw.githubusercontent.com/freelancer2020/e-shop/master/photos/makeup.jpg",
+    "productName": "Makeup",
+    "productPrice": "239$"
+  },
+  {
+    "productPhoto": "https://raw.githubusercontent.com/freelancer2020/e-shop/master/photos/coffeeMachine.jpg",
+    "productName": "Coffee machine",
+    "productPrice": "609$"
+  },
+  {
+    "productPhoto": "https://raw.githubusercontent.com/freelancer2020/e-shop/master/photos/makeuppink.png",
+    "productName": "Makeup pinkFloyed",
+    "productPrice": "49.99$"
+  },
+  {
+    "productPhoto": "https://raw.githubusercontent.com/freelancer2020/e-shop/master/photos/coffeeshop.jpeg",
+    "productName": "Coffee Shop",
+    "productPrice": "1$"
+  },
+  {
+    "productPhoto": "https://raw.githubusercontent.com/freelancer2020/e-shop/master/photos/coffeesets.jpg",
+    "productName": "Coffee Sets",
+    "productPrice": "44.99$"
+  }
+ ]
