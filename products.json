@@ -21,12 +21,12 @@
     "productPrice": "239$"
   },
   {
-    "productPhoto": "hhttps://raw.githubusercontent.com/freelancer2020/e-shop/master/photos/modern.jpg",
-    "productName": "Modern",
+    "productPhoto": "https://raw.githubusercontent.com/freelancer2020/e-shop/master/photos/furniture.jpg",
+    "productName": "Furniture",
     "productPrice": "1999$"
   },
   {
-    "productPhoto": "https://raw.githubusercontent.com/freelancer2020/e-shop/master/photos/barber.jpg",
+    "productPhoto": "https://raw.githubusercontent.com/freelancer2020/e-shop/master/photos/barber2.jpg",
     "productName": "BarBer",
     "productPrice": "50$"
   },
