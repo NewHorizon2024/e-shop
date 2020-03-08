@@ -108,11 +108,14 @@ function test() {
     .then(err => alert(err.message));
 }
 
-const userLeft = document.getElementsByClassName('container-arrow-right')[0];
+// handle scroll new products bar
+const userRight = document.getElementsByClassName('container-arrow-right')[0];
+const userLeft = document.getElementsByClassName('container-arrow-left')[0];
 
 
 let num = 0;
-userLeft.onclick = function() {
+
+userRight.onclick = function() {
     num++;
     const oneNew = document.getElementsByClassName('con-new')[0];
     const bar = document.getElementsByClassName('collection-content')[0];
@@ -122,8 +125,22 @@ userLeft.onclick = function() {
    let totalflow = num * w;
    const overflows = bar.children.length * w - bar.clientWidth;
    if (totalflow >= overflows + 80) {
-       return
+       this.style.display = 'none';
+       return;
    }
    oneNew.style.marginLeft =- num * 250 +  "px";
   
 }
+
+
+userLeft.onclick = () => {
+    num--;
+    userRight.style.display = 'flex';
+    const oneNew = document.getElementsByClassName('con-new')[0];
+    if (num <= -1) {
+        num = 0;
+        return;
+    } 
+    oneNew.style.marginLeft =- num * 250 + "px";
+}
+
