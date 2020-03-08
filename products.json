@@ -84,5 +84,21 @@
     "productPhoto": "https://raw.githubusercontent.com/freelancer2020/e-shop/master/photos/coffeesets.jpg",
     "productName": "Coffee Sets",
     "productPrice": "44.99$"
+  },
+  {
+    "productPhoto": "https://raw.githubusercontent.com/freelancer2020/e-shop/master/photos/dell.jpg",
+    "productName": "Dell XPS 13",
+    "productPrice": "1.299$"
+  },
+  {
+    "productPhoto": "https://raw.githubusercontent.com/freelancer2020/e-shop/master/photos/galaxy.jpg",
+    "productName": "Samsung Galaxy s3",
+    "productPrice": "200$"
+  },
+  {
+    "productPhoto": "https://raw.githubusercontent.com/freelancer2020/e-shop/master/photos/playstation.jpg",
+    "productName": "Play Station 4 pro",
+    "productPrice": "200$"
   }
+    
  ]
