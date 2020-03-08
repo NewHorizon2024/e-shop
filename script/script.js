@@ -75,5 +75,55 @@ function loadMainbProducts() {
     })
     
 }
-window.onload = loadMainbProducts;
+window.onload = function() {
+    loadMainbProducts();
+    test();
+}
 
+
+function test() {
+    let url = 'https://raw.githubusercontent.com/freelancer2020/hexa/master/new.json';
+    const render = document.getElementsByClassName('collection-content')[0];
+    const templ = document.getElementById('new-stuff');
+    let arr = [];
+    fetch(url)
+    .then(response => {
+        return response.json();
+    })
+    .then(news => {
+        for (let i = 0; i < news.length; i++) {
+            arr.push(news[i]);
+            let frame = templ.content.cloneNode(true);
+            render.append(frame);
+        }
+    })
+    .then(() => {
+        const clash = document.getElementsByClassName('img-new');
+        const frameNew = document.getElementsByClassName('con-new')[0];
+        for (let x = 0; x < arr.length; x++) {
+            clash[x].src = arr[x];
+        }
+       
+    })
+    .then(err => alert(err.message));
+}
+
+const userLeft = document.getElementsByClassName('container-arrow-right')[0];
+
+
+let num = 0;
+userLeft.onclick = function() {
+    num++;
+    const oneNew = document.getElementsByClassName('con-new')[0];
+    const bar = document.getElementsByClassName('collection-content')[0];
+    const  data = getComputedStyle(bar.firstElementChild);
+    
+   let w = 300;
+   let totalflow = num * w;
+   const overflows = bar.children.length * w - bar.clientWidth;
+   if (totalflow >= overflows + 80) {
+       return
+   }
+   oneNew.style.marginLeft =- num * 250 +  "px";
+  
+}
