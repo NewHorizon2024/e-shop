@@ -1,5 +1,11 @@
 'use strict';
 
+const arrowup = document.getElementById('btn-arrow-up');
+arrowup.onclick = (e) => {
+    e.preventDefault();
+    document.documentElement.scrollTo(0, 0);
+}
+
 const appLight = document.getElementsByClassName('light')[0];
 const shopBtn = document.getElementsByClassName('head-item')[0];
 shopBtn.onclick = () => {
