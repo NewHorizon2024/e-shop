@@ -272,7 +272,7 @@
     <template id = 'new-stuff'>
         <div class = 'con-new'>
             <div class = 'photo-new'>
-              <img class ='img-new' src = 'https://media3.giphy.com/media/3oEjI6SIIHBdRxXI40/giphy.gif'>
+              <img class ='img-new' src = 'https://raw.githubusercontent.com/freelancer2020/e-shop/master/loadinggif.gif'>
             <div class = 'new'>New</div>
           </div>
           <style>
@@ -311,7 +311,7 @@
     <template id = 'product-template'>
         <div class = 'product-box'>
             <div class = 'product-photo'>
-                <img src = 'https://raw.githubusercontent.com/freelancer2020/e-shop/master/loadinggif.gif' class = 'resizeImage'>
+                <img src = 'https://raw.githubusercontent.com/freelancer2020/e-shop/master/loadinggif.gif' class = 'loads'>
             </div>
             <div class = 'product product-name'></div>
             <div class = 'product product-price'></div>
@@ -326,6 +326,9 @@
             .product-photo {
                 height: 250px;
                 width: 100%;
+                display: flex;
+                justify-content: center;
+                align-items: center;
             }
             .product {
                 width: 100%;
@@ -334,7 +337,6 @@
                 justify-content: center;
                 align-items: center;
                 border-bottom: 2px solid;
-                
             }
             .product-name {
                 font-family: 'Alegreya Sans';

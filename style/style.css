@@ -551,7 +551,7 @@ header {
     transition: 0.5s ease-out;
 }
 .resizeImage:hover {
-    transform: scale(1.2,1.2);
+    transform: scale(1.5,1.5);
 }
 
 #products-header-section {
@@ -796,4 +796,8 @@ header {
 }
 #btn-arrow-up:hover {
     opacity: 1;
+}
+.loads {
+    width: 200px;
+    height: 150px;
 }

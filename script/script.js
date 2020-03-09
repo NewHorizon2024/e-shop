@@ -77,18 +77,16 @@ function loadMainbProducts() {
     })
     .then(() => {
         const lam = document.getElementsByClassName('product-box');
-        const productImage = document.getElementsByClassName('resizeImage');
+        const productImage = document.getElementsByClassName('loads');
         let i, x;
         for (i = 0; i < arr.length; i++) {
-           // const image = document.createElement("img");
-           // image.src = arr[i].productPhoto;
-           // image.classList.add('resizeImage');
-           // lam[i].firstElementChild.append(image);
+            productImage[i].classList.add('resizeImage');
             productImage[i].src = arr[i].productPhoto;
             lam[i].firstElementChild.nextElementSibling.append(arr[i].productName);
             lam[i].firstElementChild.nextElementSibling.nextElementSibling.append(arr[i].productPrice);
         }
     })
+    .catch(err => alert(err.message));
     
 }
 window.onload = function() {
