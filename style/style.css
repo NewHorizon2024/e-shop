@@ -224,9 +224,14 @@ header {
 
 .create-account {
     grid-area: createAcc;
+    font-family: 'Alegreya Sans'
 }
+
 .symbol-logo {
     grid-area: symbolLogo;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 .sign-up {
     grid-area: signUp;
@@ -241,9 +246,9 @@ header {
     grid-area: facebookBtn;
     background-color: #4267B2;
     color: #ffffff;
-    font-family: 'Alegerya Sans';
+    font-family: 'Alegreya Sans';
     display: flex;
-    justify-content: center;
+    justify-content: space-around;
     align-items: center;
     font-size: 20px;
     cursor: pointer;
@@ -255,9 +260,9 @@ header {
     grid-area: googleRegister;
     background-color: #d34836;
     color: #ffffff;
-    font-family: 'Alegerya Sans';
+    font-family: 'Alegreya Sans';
     display: flex;
-    justify-content: center;
+    justify-content: space-around;
     align-items: center;
     font-size: 20px;
     cursor: pointer;
