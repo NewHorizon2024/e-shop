@@ -47,9 +47,8 @@ loginFromReg.onclick = () => {
 function loadMainbProducts() {
     const productsContainer = document.getElementsByClassName('products-container')[0];
     const productTemplate = document.getElementById('product-template');
-    const productsUrl = 'https://raw.githubusercontent.com/freelancer2020/hexa/master/products.json';
+    const productsUrl = 'https://raw.githubusercontent.com/freelancer2020/e-shop/master/products.json';
     const arr = [];
-    //alert('hi');
     fetch(productsUrl)
     .then(response => {
         return response.json();
@@ -105,7 +104,7 @@ function test() {
         }
        
     })
-    .then(err => alert(err.message));
+    .catch(err => alert(err.message));
 }
 
 // handle scroll new products bar

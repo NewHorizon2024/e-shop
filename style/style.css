@@ -507,7 +507,7 @@ header {
     width: 100vw;
     height: 800px;
     position: relative;
-    background-image: url('https://cdn.wallpapersafari.com/9/73/IAqCsZ.jpg');
+    background-image: url('https://raw.githubusercontent.com/freelancer2020/e-shop/master/photos/fashion2020.jpg');
     z-index: 1;
     background-attachment: fixed;
     background-size: cover;
@@ -651,5 +651,113 @@ header {
     
 }
 
+.sec_5 {
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+}
+.main-section-5-container {
+    width: 90%;
+    display: flex;
+    justify-content: space-around;
+}
+.element {
+    width: 90%;
+    display: flex;
+    flex-direction: column;
+    
+}
+.element-header {
+    width: 95%;
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    font-family: 'Alegreya Sans';
+    border-bottom: 1px solid black;
+    font-size: 18px;
+    font-weight: 500;
+   
+}
+.element-content {
+    width: 100%;
+    height: 95%;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    font-family: 'Alegreya Sans';
+    margin-top: 30px;
+ 
+    
+}
 
+.element-content:nth-child(2)  {
+    align-items: flex-start;
+    text-decoration: none;
+    color: black;
+    
+}
+.user-queries {
+    text-decoration: none;
+    color: black;
+    margin: 5px;
+}
+.user-queries:hover {
+    text-decoration: underline;
 
+}
+.subscribe {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #E5E4E2;
+    height: 50px;
+    width: 400px;
+    
+}
+#mail-list {
+    margin-top: 0px;
+}
+.sub-mail-list {
+    width: 220px;
+    height: 40px;
+    border: 0px;
+    background-color: #E5E4E2;
+    padding-left: 10px;
+    font-size: 16px;
+}
+.sub-btn {
+    width: 150px;
+    height: 40px;
+    background-color: black;
+    color: #ffffff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    font-family: 'Alegreya Sans';
+    font-size: 18px;
+}
+.sec_6 {
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.payments-methods-icons {
+    width: 300px;
+    display: flex;
+    justify-content: space-around;
+}
+.social-media-icons {
+    width: 100px;
+    display: flex;
+    justify-content: space-around;
+    margin-top: 20px;
+}
+.footer {
+    width: 300px;
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}

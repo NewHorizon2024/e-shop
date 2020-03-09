@@ -6,6 +6,7 @@
         <link href='https://fonts.googleapis.com/css?family=Aclonica' rel='stylesheet'>
         <link href='https://fonts.googleapis.com/css?family=Alegreya Sans' rel='stylesheet'>
         <link href='https://fonts.googleapis.com/css?family=Allan' rel='stylesheet'>
+        <script src="https://kit.fontawesome.com/7d2d0643b6.js" crossorigin="anonymous"></script>
         <script defer type = 'text/javascript' src = 'script/script.js'></script>
     </head>
 
@@ -156,40 +157,7 @@
                 <div class = 'amood'></div>
             </div>
     </div>
-    <template id = 'product-template'>
-        <div class = 'product-box'>
-            <div class = 'product-photo'></div>
-            <div class = 'product product-name'></div>
-            <div class = 'product product-price'></div>
-        </div>
-        <style>
-            .product-box {
-                width: 300px;
-                height: 400px;
-                display: flex;
-                flex-direction: column;
-            }
-            .product-photo {
-                height: 250px;
-                width: 100%;
-            }
-            .product {
-                width: 100%;
-                height: 30px;
-                display: flex;
-                justify-content: center;
-                align-items: center;
-                border-bottom: 2px solid;
-                
-            }
-            .product-name {
-                font-family: 'Alegreya Sans';
-                font-size: 20px;
-                font-weight: bold;
-            }
-        </style>
-        
-    </template>
+    
     
     
 
@@ -208,14 +176,17 @@
         <div class = 'hole'>Products Featured</div>
         <div class = 'hole'></div>
     </div>
+
     <!--Products section-->
     <section class = 'sec_2'>
         <div class = 'products-container'></div>
     </section>
+
     <!--Lounge section-->
     <section class = 'sec_3'>
         <a class = 'our-lounge' href = '#'>Visit our lounge</a>
     </section>
+
     <!--Collection section-->
     <section class = 'sec_4'>
         <div class = 'main-container'>
@@ -232,7 +203,64 @@
         </div>
     </section>
 
-    <!--new stuff template-->
+    <section class = 'sec_5'>
+        <div class = 'main-section-5-container'>
+            <div class = 'element element-left'>
+                <div class = 'element-header'>Customer Care</div>
+                <div class = 'element-content'>
+                    <a href = '#' class = 'user-queries'>CONTACT US</a>
+                    <a href = '#' class = 'user-queries'>FAQS</a>
+                    <a href = '#' class = 'user-queries'>THE STORY</a>
+                    <a href = '#' class = 'user-queries'>STORE LOCATION</a>
+                    <a href = '#' class = 'user-queries'>BLOG</a>
+                    <a href = '#' class = 'user-queries'>CAREERS</a>
+                    <a href = '#' class = 'user-queries'>TERMS OF USE</a>
+                    <a href = '#' class = 'user-queries'>SHIPPING</a>
+                    <a href = '#' class = 'user-queries'>RETURNS</a>
+                    <a href = '#' class = 'user-queries'>PRIVACY POLICY</a>
+                </div>
+            </div>
+            <div class = 'element element-middle'>
+                <div class = 'element-header'>About</div>
+                <div class = 'element-content'>
+                    Here you will introduce yourself your name and your store as well
+                    what products you offer for audience.
+                    what make you unique in international trade market.
+                    your features and performance achievement.
+                    what your future plans for extending your store and products.
+                </div>
+            </div>
+            <div class = 'element element-lright'>
+                <div class = 'element-header'>Newsletter</div>
+                <div class = 'element-content'>
+                    <p id = 'mail-list'> Join our mailing list</p>
+                    <div class = 'subscribe'>
+                        <input type = 'email' class = 'sub-mail-list' placeholder="your@email.com">
+                        <div class = 'sub-btn'>Subscribe</div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class = 'sec_6'>
+        <div class = 'payments-methods-icons'>
+            <i class="fab fa-cc-visa fa-2x"></i>
+            <i class="fab fa-cc-mastercard fa-2x"></i>
+            <i class="fab fa-cc-paypal fa-2x"></i>
+            <i class="fab fa-cc-amex fa-2x"></i>
+        </div> 
+        <div class = 'social-media-icons'>
+            <i class="fab fa-facebook fa-2x"></i>
+            <i class="fab fa-instagram fa-2x"></i>
+        </div>
+        <div class = 'footer'>
+            <i class="far fa-copyright"></i>MOSTAFA MOHAMED 2020.
+        </div>
+    </section>
+
+    <!--Templates-->
     <template id = 'new-stuff'>
         <div class = 'con-new'>
             <div class = 'photo-new'>
@@ -270,6 +298,40 @@
                   margin-bottom: 10px;
             }
           </style>
+    </template>
+
+    <template id = 'product-template'>
+        <div class = 'product-box'>
+            <div class = 'product-photo'></div>
+            <div class = 'product product-name'></div>
+            <div class = 'product product-price'></div>
+        </div>
+        <style>
+            .product-box {
+                width: 300px;
+                height: 400px;
+                display: flex;
+                flex-direction: column;
+            }
+            .product-photo {
+                height: 250px;
+                width: 100%;
+            }
+            .product {
+                width: 100%;
+                height: 30px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                border-bottom: 2px solid;
+                
+            }
+            .product-name {
+                font-family: 'Alegreya Sans';
+                font-size: 20px;
+                font-weight: bold;
+            }
+        </style>
     </template>
 
    
