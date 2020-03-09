@@ -1,5 +1,6 @@
 'use strict';
 
+const appLight = document.getElementsByClassName('light')[0];
 const shopBtn = document.getElementsByClassName('head-item')[0];
 shopBtn.onclick = () => {
   const page = document.getElementsByClassName('header-menu')[0];
@@ -14,27 +15,35 @@ logoShop.onclick = () => {
 const loginUser = document.getElementsByClassName('font-h')[0];
 const loginFormat = document.getElementsByClassName('login-user')[0];
 
-loginUser.onclick = () => {
+loginUser.onclick = (e) => {
+    e.preventDefault();
     loginFormat.classList.toggle('open-login');
-    document.body.classList.toggle('backLamp');
+    appLight.classList.add('dark');
 }
 
 const userCancel = document.getElementsByClassName('cancel')[0];
-userCancel.onclick = () => {
+userCancel.onclick = (e) => {
+    e.preventDefault();
     loginFormat.classList.remove('open-login');
-    document.body.classList.remove('backLamp');
+    appLight.classList.remove('dark');
+   
 }
 
 const cancelReg = document.getElementsByClassName('cancel-reg')[0];
 const mainReg = document.getElementsByClassName('create-account-container')[0];
 
-cancelReg.onclick = () => {
+cancelReg.onclick = (e) => {
+    e.preventDefault();
     mainReg.classList.remove('open-reg');
+    appLight.classList.remove('dark');
 }
 
 const userReg = document.getElementsByClassName('open-regis')[0];
-userReg.onclick = () => {
+userReg.onclick = (e) => {
+    e.preventDefault();
     mainReg.classList.add('open-reg');
+    appLight.classList.add('dark');
+    
 }
 
 const loginFromReg = document.getElementsByClassName('login-link')[0];
