@@ -373,8 +373,20 @@
         <script>
             function closeBoardCart() {
                 const chart = document.getElementsByClassName('item-board')[0];
+                obj.val = 1;
+                for (let i = 0; i < chart.children.length; i++) {
+                    chart.children[i].remove();
+                }
                 chart.style.display = 'none';
             }
+            (function() {
+                const renderName = document.getElementById('item-name');
+                const renderPrice = document.getElementById('item-price');
+                const renderImage = document.getElementsByClassName('item-source-image')[0];
+                renderName.textContent = boardInfo.product_name;
+                renderPrice.textContent = boardInfo.product_price;
+                renderImage.src = boardInfo.product_src;
+            })();
         </script>
         <style>
             .item-container {
@@ -442,11 +454,10 @@
 }
 
 #item-price {
-    width: 200px;
+    width: auto;
     height: 50px;
     display: flex;
-    background-color: lightgreen;
-    font-family: 'Alegreya Sans'
+    font-size: 20px;
 }
 #payments-method {
     height: 200px;
@@ -455,10 +466,10 @@
     border-radius: 5px;
 }
 #item-name {
-    width: 200px;
+    width: auto;
     height: 50px;
-    font-family: 'Alegreya Sans';
-    font-size: 40px;
+   
+    font-size: 30px;
 }
 #item-describution {
     width: 300px;
@@ -489,6 +500,15 @@
                 <div class = 'price'></div>
             </div>
         </div>
+        <script>
+            const [userInc, userDec, count, userpr] = [
+                document.getElementById('plus'),
+                document.getElementById('minos'),
+                document.getElementById('quantity-number'),
+                document.getElementsByClassName('price')[0]
+            ];
+            
+        </script>
         
             <style>
                 .rocks-1 {
@@ -497,6 +517,10 @@
                     justify-content: center;
                     align-items: center;
                     flex-direction: column;
+                }
+                .price {
+                    font-size: 30px;
+                    font-family:Arial, Helvetica, sans-serif;
                 }
             #qantity-container {
                 width: 100px;

@@ -168,7 +168,11 @@ userLeft.onclick = () => {
 
 
 const obj = {
-    val: 1, 
+    val: 1,
+    inco: 1,
+    calculation() {
+        return this.inco * parseInt(boardInfo.product_price);
+    } 
 }
 
 class Quantity extends HTMLDivElement {
@@ -179,11 +183,13 @@ class Quantity extends HTMLDivElement {
     connectedCallback() {
         this.appendChild(document.getElementById('quantity').content.cloneNode(true));
         const quantityValue = document.getElementById('qauntity-number');
+        
         const min = document.getElementById('minos');
         const plu = document.getElementById('plus');
         min.addEventListener('click', this.dec, false);
         plu.addEventListener('click', this.inc, false);
         quantityValue.textContent = obj.val;
+        
     }
 
     dec() {
@@ -193,12 +199,17 @@ class Quantity extends HTMLDivElement {
         obj.val--;
         const quantityValue = document.getElementById('qauntity-number');
         quantityValue.textContent = obj.val;
+        let ts = document.getElementsByClassName('price')[0];
+        ts.textContent = `${(obj.val * parseInt(boardInfo.product_price))}$`;
+        
     }
 
     inc() {
         obj.val++;
         const quantityValue2 = document.getElementById('qauntity-number');
         quantityValue2.textContent = obj.val;
+        let ts = document.getElementsByClassName('price')[0];
+        ts.textContent = `${(obj.val * parseInt(boardInfo.product_price))}$`;
     }
 
 }
@@ -211,7 +222,15 @@ const boardInfo = {
     product_src: ''
 }
 
+
 function trial(e) {
+    const chart = document.getElementsByClassName('item-board')[0];
+    if (chart.children.length > 0) {
+        
+        for (let i = 0; i < chart.children.length; i++) {
+            chart.children[i].remove();
+        }
+    }
     if (e.target.className != 'loads resizeImage') return;
     const $productName = e.target.parentElement.nextElementSibling.textContent;
     const $prodcutPrice = e.target.parentElement.nextElementSibling.nextElementSibling.textContent;
@@ -220,8 +239,16 @@ function trial(e) {
     boardInfo.product_price = $prodcutPrice;
     boardInfo.product_src = $productImage;
 
-    //alert($productImage);
-    
+    const fullB = document.getElementsByClassName('item-board')[0];
+    const templateItemBoard = document.getElementById('item-board-control').content.cloneNode(true);
+    fullB.append(templateItemBoard);
+    fullB.style.display = 'flex';
+
+    setTimeout(() => {
+        const myPrice = document.getElementsByClassName('price')[0];
+        myPrice.textContent = $prodcutPrice;
+
+    }, 500);
 }
 
 const cover = document.getElementsByClassName('products-container')[0];
