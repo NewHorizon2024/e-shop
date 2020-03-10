@@ -92,12 +92,6 @@ function loadMainbProducts() {
 window.onload = function() {
     loadMainbProducts();
     test();
-//const renderItemBoard = document.createElement('div');
-//renderItemBoard.classList.add("item-board");
-//const templateItemBoard = document.getElementById('item-board-control').content.cloneNode(true);
-
-//window.onload = () => renderItemBoard.append(templateItemBoard);
-
 }
 
 
@@ -183,13 +177,11 @@ class Quantity extends HTMLDivElement {
     connectedCallback() {
         this.appendChild(document.getElementById('quantity').content.cloneNode(true));
         const quantityValue = document.getElementById('qauntity-number');
-        
         const min = document.getElementById('minos');
         const plu = document.getElementById('plus');
         min.addEventListener('click', this.dec, false);
         plu.addEventListener('click', this.inc, false);
         quantityValue.textContent = obj.val;
-        
     }
 
     dec() {
@@ -201,7 +193,6 @@ class Quantity extends HTMLDivElement {
         quantityValue.textContent = obj.val;
         let ts = document.getElementsByClassName('price')[0];
         ts.textContent = `${(obj.val * parseInt(boardInfo.product_price))}$`;
-        
     }
 
     inc() {
@@ -231,6 +222,7 @@ function trial(e) {
             chart.children[i].remove();
         }
     }
+    appLight.classList.add('dark');
     if (e.target.className != 'loads resizeImage') return;
     const $productName = e.target.parentElement.nextElementSibling.textContent;
     const $prodcutPrice = e.target.parentElement.nextElementSibling.nextElementSibling.textContent;
