@@ -5,6 +5,7 @@ body, html {
     position: relative;
     scroll-behavior: smooth;
     
+    
 }
 .light {
     width: 100vw;
@@ -703,8 +704,6 @@ header {
     flex-direction: column;
     font-family: 'Alegreya Sans';
     margin-top: 30px;
- 
-    
 }
 
 .element-content:nth-child(2)  {
@@ -720,8 +719,8 @@ header {
 }
 .user-queries:hover {
     text-decoration: underline;
-
 }
+
 .subscribe {
     display: flex;
     align-items: center;
@@ -729,11 +728,13 @@ header {
     background-color: #E5E4E2;
     height: 50px;
     width: 400px;
-    
+    border-radius: 3px;
 }
+
 #mail-list {
     margin-top: 0px;
 }
+
 .sub-mail-list {
     width: 220px;
     height: 40px;
@@ -742,6 +743,7 @@ header {
     padding-left: 10px;
     font-size: 16px;
 }
+
 .sub-btn {
     width: 150px;
     height: 40px;
@@ -754,6 +756,7 @@ header {
     font-family: 'Alegreya Sans';
     font-size: 18px;
 }
+
 .sec_6 {
     width: 100vw;
     display: flex;
@@ -761,17 +764,20 @@ header {
     justify-content: center;
     align-items: center;
 }
+
 .payments-methods-icons {
     width: 300px;
     display: flex;
     justify-content: space-around;
 }
+
 .social-media-icons {
     width: 100px;
     display: flex;
     justify-content: space-around;
     margin-top: 20px;
 }
+
 .footer {
     width: 300px;
     display: flex;
@@ -794,10 +800,32 @@ header {
     opacity: 0.5;
     cursor: pointer;
 }
+
 #btn-arrow-up:hover {
     opacity: 1;
 }
+
 .loads {
     width: 200px;
     height: 150px;
 }
+.item-board {
+    width: 70vw;
+    height: 95vh;
+    background-color: #F9F8F6;
+    position: fixed;
+    z-index: 11;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    margin: auto;
+    border-radius: 3px;
+    justify-content: center;
+    align-items: center;
+}
+
+
+
+
+

@@ -158,3 +158,47 @@ userLeft.onclick = () => {
     oneNew.style.marginLeft =- num * 250 + "px";
 }
 
+
+const renderItemBoard = document.getElementsByClassName('item-board')[0];
+const templateItemBoard = document.getElementById('item-board-control').content.cloneNode(true);
+
+window.onload = () => renderItemBoard.append(templateItemBoard);
+
+
+const obj = {
+    val: 1, 
+}
+
+class Quantity extends HTMLDivElement {
+    constructor() {
+        super();
+    }
+
+    connectedCallback() {
+        this.appendChild(document.getElementById('quantity').content.cloneNode(true));
+        const quantityValue = document.getElementById('qauntity-number');
+        const min = document.getElementById('minos');
+        const plu = document.getElementById('plus');
+        min.addEventListener('click', this.dec, false);
+        plu.addEventListener('click', this.inc, false);
+        quantityValue.textContent = obj.val;
+    }
+
+    dec() {
+        if (obj.val <= 1) {
+            return;
+        }
+        obj.val--;
+        const quantityValue = document.getElementById('qauntity-number');
+        quantityValue.textContent = obj.val;
+    }
+
+    inc() {
+        obj.val++;
+        const quantityValue2 = document.getElementById('qauntity-number');
+        quantityValue2.textContent = obj.val;
+    }
+
+}
+
+customElements.define("my-quantity", Quantity, {extends: 'div'});
