@@ -92,6 +92,12 @@ function loadMainbProducts() {
 window.onload = function() {
     loadMainbProducts();
     test();
+//const renderItemBoard = document.createElement('div');
+//renderItemBoard.classList.add("item-board");
+//const templateItemBoard = document.getElementById('item-board-control').content.cloneNode(true);
+
+//window.onload = () => renderItemBoard.append(templateItemBoard);
+
 }
 
 
@@ -159,10 +165,6 @@ userLeft.onclick = () => {
 }
 
 
-const renderItemBoard = document.getElementsByClassName('item-board')[0];
-const templateItemBoard = document.getElementById('item-board-control').content.cloneNode(true);
-
-window.onload = () => renderItemBoard.append(templateItemBoard);
 
 
 const obj = {
@@ -202,3 +204,25 @@ class Quantity extends HTMLDivElement {
 }
 
 customElements.define("my-quantity", Quantity, {extends: 'div'});
+
+const boardInfo = {
+    product_name: '',
+    product_price: '',
+    product_src: ''
+}
+
+function trial(e) {
+    if (e.target.className != 'loads resizeImage') return;
+    const $productName = e.target.parentElement.nextElementSibling.textContent;
+    const $prodcutPrice = e.target.parentElement.nextElementSibling.nextElementSibling.textContent;
+    const $productImage = e.target.src;
+    boardInfo.product_name = $productName;
+    boardInfo.product_price = $prodcutPrice;
+    boardInfo.product_src = $productImage;
+
+    //alert($productImage);
+    
+}
+
+const cover = document.getElementsByClassName('products-container')[0];
+cover.onclick = trial;

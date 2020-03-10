@@ -810,6 +810,7 @@ header {
     height: 150px;
 }
 .item-board {
+    display: none;
     width: 70vw;
     height: 95vh;
     background-color: #F9F8F6;
