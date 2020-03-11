@@ -205,7 +205,8 @@ class Quantity extends HTMLDivElement {
         const quantityValue = document.getElementById('qauntity-number');
         quantityValue.textContent = obj.val;
         let ts = document.getElementsByClassName('price')[0];
-        ts.textContent = `${(obj.val * parseInt(boardInfo.product_price))}$`;
+        const num = parseFloat(boardInfo.product_price);
+        ts.textContent = `${Number(parseFloat(num * obj.val).toFixed(2))}$`;
     }
 
     inc() {
@@ -213,7 +214,8 @@ class Quantity extends HTMLDivElement {
         const quantityValue2 = document.getElementById('qauntity-number');
         quantityValue2.textContent = obj.val;
         let ts = document.getElementsByClassName('price')[0];
-        ts.textContent = `${(obj.val * parseInt(boardInfo.product_price))}$`;
+        const num = parseFloat(boardInfo.product_price);
+        ts.textContent = `${Number(parseFloat(num * obj.val).toFixed(2))}$`;
     }
 
 }
