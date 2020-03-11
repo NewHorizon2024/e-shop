@@ -198,24 +198,35 @@ class Quantity extends HTMLDivElement {
     }
 
     dec() {
+        let total;
         if (obj.val <= 1) {
             return;
         }
         obj.val--;
+        if (obj.val <= 1) {
+            total = 'item';
+        } else {
+            total = 'items';
+        }
+
         const quantityValue = document.getElementById('qauntity-number');
         quantityValue.textContent = obj.val;
         let ts = document.getElementsByClassName('price')[0];
         const num = parseFloat(boardInfo.product_price);
-        ts.textContent = `${Number(parseFloat(num * obj.val).toFixed(3))}$. (${obj.val}) items`;
+        ts.textContent = `${Number(parseFloat(num * obj.val).toFixed(3))}$. (${obj.val}) ${total}`;
     }
 
     inc() {
         obj.val++;
+        let total = 'items';
         const quantityValue2 = document.getElementById('qauntity-number');
         quantityValue2.textContent = obj.val;
         let ts = document.getElementsByClassName('price')[0];
         const num = parseFloat(boardInfo.product_price);
-        ts.textContent = `${Number(parseFloat(num * obj.val).toFixed(3))}$. (${obj.val}) items`;
+        if (obj.val <= 2) {
+            ts.textContent = `${Number(parseFloat(num * obj.val).toFixed(3))}$.`;
+        }
+        ts.textContent = `${Number(parseFloat(num * obj.val).toFixed(3))}$. (${obj.val}) ${total}`;
     }
 
 }
