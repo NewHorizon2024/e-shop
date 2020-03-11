@@ -6,6 +6,7 @@ arrowup.onclick = (e) => {
     document.documentElement.scrollTo(0, 0);
 }
 
+
 const appLight = document.getElementsByClassName('light')[0];
 const shopBtn = document.getElementsByClassName('head-item')[0];
 shopBtn.onclick = () => {
@@ -13,51 +14,59 @@ shopBtn.onclick = () => {
    page.classList.toggle('open-menu');
 }
 
+
 const logoShop = document.getElementsByClassName('gfont')[0];
 logoShop.onclick = () => {
     window.location.reload();
 }
 
+
 const loginUser = document.getElementsByClassName('font-h')[0];
 const loginFormat = document.getElementsByClassName('login-user')[0];
-
-loginUser.onclick = (e) => {
+function openLoginformat(e) {
     e.preventDefault();
     loginFormat.classList.toggle('open-login');
     appLight.classList.add('dark');
 }
+loginUser.addEventListener('click', openLoginformat, false);
+
 
 const userCancel = document.getElementsByClassName('cancel')[0];
-userCancel.onclick = (e) => {
+function cancelLoginformat(e) {
     e.preventDefault();
     loginFormat.classList.remove('open-login');
     appLight.classList.remove('dark');
-   
 }
+userCancel.addEventListener('click', cancelLoginformat, false);
+
 
 const cancelReg = document.getElementsByClassName('cancel-reg')[0];
 const mainReg = document.getElementsByClassName('create-account-container')[0];
-
-cancelReg.onclick = (e) => {
+function cancelRegFormat(e) {
     e.preventDefault();
     mainReg.classList.remove('open-reg');
     appLight.classList.remove('dark');
 }
+cancelReg.addEventListener('click', cancelRegFormat, false);
+
 
 const userReg = document.getElementsByClassName('open-regis')[0];
-userReg.onclick = (e) => {
+function openRegFormat(e) {
     e.preventDefault();
     mainReg.classList.add('open-reg');
     appLight.classList.add('dark');
-    
 }
+userReg.addEventListener('click', openRegFormat, false);
+
 
 const loginFromReg = document.getElementsByClassName('login-link')[0];
-
-loginFromReg.onclick = () => {
+function openLoginFromReg(e) {
+    e.preventDefault();
     mainReg.classList.remove('open-reg');
     loginFormat.classList.add('open-login');
 }
+loginFromReg.addEventListener('click', openLoginFromReg, false);
+
 
 function loadMainbProducts() {
     const productsContainer = document.getElementsByClassName('products-container')[0];
@@ -84,10 +93,10 @@ function loadMainbProducts() {
             productImage[i].src = arr[i].productPhoto;
             lam[i].firstElementChild.nextElementSibling.append(arr[i].productName);
             lam[i].firstElementChild.nextElementSibling.nextElementSibling.append(arr[i].productPrice);
-        }
+            productImage[i].desc = arr[i].describtion; // describtion test
+       }
     })
     .catch(err => alert(err.message));
-    
 }
 window.onload = function() {
     loadMainbProducts();
@@ -169,6 +178,7 @@ const obj = {
     } 
 }
 
+
 class Quantity extends HTMLDivElement {
     constructor() {
         super();
@@ -204,8 +214,8 @@ class Quantity extends HTMLDivElement {
     }
 
 }
-
 customElements.define("my-quantity", Quantity, {extends: 'div'});
+
 
 const boardInfo = {
     product_name: '',
@@ -215,6 +225,8 @@ const boardInfo = {
 
 
 function trial(e) {
+
+   if (e.target.className != 'loads resizeImage') return;
     const chart = document.getElementsByClassName('item-board')[0];
     if (chart.children.length > 0) {
         
@@ -223,14 +235,13 @@ function trial(e) {
         }
     }
     appLight.classList.add('dark');
-    if (e.target.className != 'loads resizeImage') return;
+    
     const $productName = e.target.parentElement.nextElementSibling.textContent;
     const $prodcutPrice = e.target.parentElement.nextElementSibling.nextElementSibling.textContent;
     const $productImage = e.target.src;
     boardInfo.product_name = $productName;
     boardInfo.product_price = $prodcutPrice;
     boardInfo.product_src = $productImage;
-
     const fullB = document.getElementsByClassName('item-board')[0];
     const templateItemBoard = document.getElementById('item-board-control').content.cloneNode(true);
     fullB.append(templateItemBoard);
@@ -244,4 +255,6 @@ function trial(e) {
 }
 
 const cover = document.getElementsByClassName('products-container')[0];
-cover.onclick = trial;
+
+cover.addEventListener('click', trial, false);
+

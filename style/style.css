@@ -812,7 +812,7 @@ header {
 .item-board {
     display: none;
     width: 70vw;
-    height: 95vh;
+    height: 70vh;
     background-color: #F9F8F6;
     position: fixed;
     z-index: 11;
@@ -824,6 +824,7 @@ header {
     border-radius: 3px;
     justify-content: center;
     align-items: center;
+    overflow: auto;
 }
 
 
