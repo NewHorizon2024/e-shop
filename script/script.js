@@ -220,12 +220,13 @@ customElements.define("my-quantity", Quantity, {extends: 'div'});
 const boardInfo = {
     product_name: '',
     product_price: '',
-    product_src: ''
+    product_src: '',
+    product_describtion: ''
 }
 
 
 function trial(e) {
-
+  try {
    if (e.target.className != 'loads resizeImage') return;
     const chart = document.getElementsByClassName('item-board')[0];
     if (chart.children.length > 0) {
@@ -242,6 +243,7 @@ function trial(e) {
     boardInfo.product_name = $productName;
     boardInfo.product_price = $prodcutPrice;
     boardInfo.product_src = $productImage;
+   
     const fullB = document.getElementsByClassName('item-board')[0];
     const templateItemBoard = document.getElementById('item-board-control').content.cloneNode(true);
     fullB.append(templateItemBoard);
@@ -249,9 +251,14 @@ function trial(e) {
 
     setTimeout(() => {
         const myPrice = document.getElementsByClassName('price')[0];
+        const des = document.getElementById('item-describution');
+        des.textContent = e.target.desc;
         myPrice.textContent = $prodcutPrice;
 
-    }, 500);
+    }, 0);
+}catch(err) {
+    alert(err.emssage);
+}
 }
 
 const cover = document.getElementsByClassName('products-container')[0];
