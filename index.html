@@ -367,6 +367,7 @@
                     <div id ='item-name' class = 'fixers'></div>
                     <div id = 'item-describution' class = 'fixers'></div>
                     <div id = 'item-inputs' class = 'fixers'></div>
+                    <div id = 'item-quNum' class = 'fixers'>QUANTITY</div>
                     <div id = 'item-quantity'>
                         <div is = 'my-quantity'></div>
                     </div>
@@ -451,6 +452,25 @@
 
 .fa-times-circle:hover {
     color: red;
+    position: relative;
+}
+.close-board:hover.close-board::after {
+    content: 'close';
+    width: 60px;
+    height: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #FFFFC2;
+    border: 1px solid #212121;
+    position: absolute;
+    top: 0;
+    left: 0;
+    margin-left: 40px;
+    margin-top: 25px;
+    z-index: 11;
+    border-radius: 3px;
+
 }
 .fixers {
     display: flex;
@@ -478,7 +498,11 @@
 #item-describution {
     width: 300px;
     height: 200px;
-    
+}
+#item-quNum {
+    font-family: sans-serif;
+    font-size: 14px;
+    font-weight: bold;
 }
 #item-inputs {
     width: 400px;
@@ -486,7 +510,6 @@
     flex-direction: column;
     border: 1px solid #E5E4E2;
     border-radius: 5px;
-    
 }
         </style>
     </template>
@@ -533,6 +556,7 @@
                 display: flex;
                 justify-content: space-around;
                 align-items: center;
+                margin-top: 10px;
             }
             .q-fix {
                 width: 100%;
