@@ -328,6 +328,7 @@
                 display: flex;
                 justify-content: center;
                 align-items: center;
+                cursor: pointer;
             }
             .product {
                 width: 100%;
@@ -359,7 +360,10 @@
                 </div>
                 <div class = 'item-settings'>
                     <div id = 'item-price' class = 'fixers'></div>
-                    <div id = 'payments-method' class = 'fixers'></div>
+                    <div id = 'payments-method' class = 'fixers'>
+                        This part will render offers and discount provided
+                        by payments compnies(Visia, AMEX, MAsterCard, etc..)
+                    </div>
                     <div id ='item-name' class = 'fixers'></div>
                     <div id = 'item-describution' class = 'fixers'></div>
                     <div id = 'item-inputs' class = 'fixers'></div>
@@ -452,6 +456,8 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    font-family: Arial, Helvetica, sans-serif;
+    color: #212121;
 }
 
 #item-price {
@@ -463,20 +469,16 @@
 #payments-method {
     height: 200px;
     width: 400px;
-    border: 2px solid #E5E4E2;
-    border-radius: 5px;
 }
 #item-name {
     width: auto;
     height: 50px;
-   
     font-size: 30px;
 }
 #item-describution {
     width: 300px;
     height: 200px;
-    border: 2px solid #E5E4E2;
-    border-radius: 5px;
+    
 }
 #item-inputs {
     width: 400px;

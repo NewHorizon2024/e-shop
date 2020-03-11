@@ -93,6 +93,9 @@ function loadMainbProducts() {
             productImage[i].src = arr[i].productPhoto;
             lam[i].firstElementChild.nextElementSibling.append(arr[i].productName);
             lam[i].firstElementChild.nextElementSibling.nextElementSibling.append(arr[i].productPrice);
+            if (!arr[i].describtion) {
+                arr[i].describtion = `There is no description found in the database.`;
+            }
             productImage[i].desc = arr[i].describtion; // describtion test
        }
     })
@@ -252,7 +255,7 @@ function trial(e) {
     setTimeout(() => {
         const myPrice = document.getElementsByClassName('price')[0];
         const des = document.getElementById('item-describution');
-        des.textContent = e.target.desc;
+        des.innerHTML = e.target.desc;
         myPrice.textContent = $prodcutPrice;
 
     }, 0);
