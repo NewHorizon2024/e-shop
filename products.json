@@ -4,32 +4,37 @@
     "productPhoto": "https://raw.githubusercontent.com/freelancer2020/e-shop/master/photos/sophia.jpg",
     "productName": "Sophia",
     "productPrice": "399$",
-    "describtion": "This is a demo describtion of the product"
+    "describtion": "table with two comfortable chairs and row made of GX wood in sweden."
   },
   {
     "productPhoto": "https://raw.githubusercontent.com/freelancer2020/e-shop/master/photos/marina.jpg",
     "productName": "Marina",
-    "productPrice": "299$"
+    "productPrice": "299$",
+    "describtion": "Long dress with cut out detail"
   },
   {
     "productPhoto": "https://raw.githubusercontent.com/freelancer2020/e-shop/master/photos/linda.jpg",
     "productName": "Linda",
-    "productPrice": "199$"
+    "productPrice": "199$",
+    "describtion": "Short dress with cut out detail"
   },
   {
     "productPhoto": "https://raw.githubusercontent.com/freelancer2020/e-shop/master/photos/marco.jpg",
     "productName": "Marco",
-    "productPrice": "239$"
+    "productPrice": "239$",
+    "describtion": "elegant blue black suit"
   },
   {
     "productPhoto": "https://raw.githubusercontent.com/freelancer2020/e-shop/master/photos/furniture.jpg",
     "productName": "Furniture",
-    "productPrice": "1999$"
+    "productPrice": "1999$",
+    "describtion": "Silver table with six comfortable chairs"
   },
   {
     "productPhoto": "https://raw.githubusercontent.com/freelancer2020/e-shop/master/photos/barber2.jpg",
     "productName": "BarBer",
-    "productPrice": "50$"
+    "productPrice": "50$",
+    "describtion": "Special gift card for barber shop"
   },
   {
     "productPhoto": "https://raw.githubusercontent.com/freelancer2020/e-shop/master/photos/collection.jpg",
