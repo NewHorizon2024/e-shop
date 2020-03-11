@@ -26,6 +26,18 @@ header {
     box-shadow: 10px 10px 10px #ffffff;
     z-index: 2;
 }
+.market {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.cic {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: -15px;
+    margin-left: 5px;
+}
 
 #first-header {
     width: 100vw;
