@@ -94,7 +94,8 @@
   {
     "productPhoto": "https://raw.githubusercontent.com/freelancer2020/e-shop/master/photos/dell.jpg",
     "productName": "Dell XPS 13",
-    "productPrice": "1.299$"
+    "productPrice": "1.299$",
+    "describtion": "Samsung Galaxy s3 i7"
   },
   {
     "productPhoto": "https://raw.githubusercontent.com/freelancer2020/e-shop/master/photos/galaxy.jpg",
