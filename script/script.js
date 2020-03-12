@@ -110,6 +110,9 @@ window.onload = function() {
     cartContent.append(back);
     back.style.width = "200px";
     back.style.height = "200px";
+    const myData = JSON.parse(localStorage.getItem('data'));
+    cartItemsCounter.textContent = myData.length;
+
 }
 
 
@@ -284,6 +287,45 @@ function trial(e) {
 }
 
 const cover = document.getElementsByClassName('products-container')[0];
-
 cover.addEventListener('click', trial, false);
 
+
+const cartItemsCounter = document.getElementsByClassName('items-num')[0];
+function addDataToCart(e) {
+    e = window.event;
+    const quantityNum = e.currentTarget.previousElementSibling.children[1].textContent;
+    try {
+        const dataObj = {
+            product_name: boardInfo.product_name,
+            product_price: boardInfo.product_price,
+            product_src: boardInfo.product_src,
+            product_quantity: quantityNum,
+            product_describtion: boardInfo.product_describtion
+        };
+       
+        let [currentData, oldData, fullData] = [[], [], []];
+        
+        const tech = localStorage.getItem('data');
+        if (tech == null) {
+            currentData.push(dataObj);
+            localStorage.setItem('data', JSON.stringify(currentData)); 
+        } else {
+            const pullOldData = localStorage.getItem('data');
+            localStorage.removeItem('data');
+            const initOldData = JSON.parse(pullOldData);
+            oldData = initOldData;
+            currentData.push(dataObj);
+            fullData = currentData.concat(oldData);
+            localStorage.setItem('data', JSON.stringify(fullData));
+            const cartItemsCounter = document.getElementsByClassName('items-num')[0];
+        }
+        let dataView = JSON.parse(localStorage.getItem('data'));
+        cartItemsCounter.textContent = dataView.length;
+    
+    } catch(err) {
+        alert(err.message);
+    }
+}
+
+const cartBtn = document.getElementsByClassName('cart-btn')[0]
+cartBtn.onclick = addDataToCart;
