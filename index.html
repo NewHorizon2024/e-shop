@@ -186,6 +186,9 @@
         <div class = 'part-bottom'>
             <span class = 'instructions'>Special instructions for seller</span>
             <textarea class = 'txt-area'></textarea>
+            <p class = 'sub-total-p'>Subtotal:<span class = 'sub-total'></span></p>
+            <i>Shipping & taxes calculated at checkout</i>
+            <div class = 'check-out'>Check Out</div>
         </div><!--part bottom-->
 
     </div>
@@ -629,6 +632,91 @@
             }
             </style>
             
+    </template>
+
+    <template id = 'checkout'>
+        <div class = 'checkout-container'>
+            <div class = 'left-side'>
+                <div class = 'image-check'>
+                    <img src = 'https://astronomy.com/~/media/D9505152D60F4BC78E5E24BF3F7765A6.jpg' class = 'check-image'>
+                </div>
+                <div class = 'check-details-left'>
+                    <p class = 'check-item check-name'>name</p>
+                    <p class = 'check-item check-des'>describtion</p>
+                    <div class = 'check-remove'>
+                        <i class="far fa-trash-alt"></i>
+                        <p id = 'rem'>remove</p>
+                    </div>
+                </div>
+            </div>
+            <div class = 'right-side'>
+                <div class = 'check-details-right'>
+                    <p class = 'check-item check-price'>price</p>
+                    <p class = 'check-item check-quantity'>2</p>
+                </div>
+            </div>
+        </div>
+        <style>
+            .checkout-container {
+                width: 80%;
+                height: 250px;
+                display: flex;
+                justify-content: space-around;
+                border: 1px solid;
+                border-radius: 3px;
+            }
+            .left-side {
+                width: 45%;
+                height: 90%;
+                display: flex;
+                justify-content: space-around;
+            }
+            .check-image {
+                width: 100%;
+                height: 150px;
+                border-radius: 3px;
+            }
+            .image-check {
+                width: 50%;
+                height: 100%;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            }
+            .check-details-left {
+                width: 40%;
+                height: 100%;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+            }
+            .check-remove {
+                width: 100%;
+                height: 100%;
+                display: flex;
+                justify-content: flex-start;
+                align-items: center;
+            }
+            .right-side {
+                width: 40%;
+                height: 90%;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+            }
+            .check-item {
+                height: 100%;
+                width: 100%;
+                font-family: 'Alegreya Sans';
+
+            }
+            #rem {
+                margin-left: 5px;
+                cursor: pointer;
+                color: #C7C6C4;
+            }
+            
+        </style>
     </template>
 
 

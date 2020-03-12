@@ -101,6 +101,8 @@ function loadMainbProducts() {
     })
     .catch(err => alert(err.message));
 }
+
+// window load
 window.onload = function() {
     loadMainbProducts();
     test();
@@ -112,6 +114,11 @@ window.onload = function() {
     back.style.height = "200px";
     const myData = JSON.parse(localStorage.getItem('data'));
     cartItemsCounter.textContent = myData.length;
+
+    const tem = document.getElementById('checkout').content.cloneNode(true);
+    
+    cartContent.children[0].remove();
+    cartContent.append(tem);
 
 }
 
