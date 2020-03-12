@@ -104,6 +104,12 @@ function loadMainbProducts() {
 window.onload = function() {
     loadMainbProducts();
     test();
+    const cartContent = document.getElementsByClassName("cart-content")[0];
+    const back = document.createElement('img');
+    back.src = 'https://raw.githubusercontent.com/freelancer2020/e-shop/master/shopping-cart.jpg';
+    cartContent.append(back);
+    back.style.width = "200px";
+    back.style.height = "200px";
 }
 
 
