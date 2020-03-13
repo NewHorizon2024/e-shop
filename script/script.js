@@ -116,7 +116,7 @@ window.onload = function() {
     cartItemsCounter.textContent = myData.length;
 
    
-    
+    /*
     cartContent.children[0].remove();
     
     let i = 3;
@@ -125,6 +125,7 @@ window.onload = function() {
         cartContent.append(tem);
 
     }
+    */
 }
 
 
