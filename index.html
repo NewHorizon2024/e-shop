@@ -645,7 +645,7 @@
                     <p class = 'check-item check-des'>describtion</p>
                     <div class = 'check-remove'>
                         <i class="far fa-trash-alt"></i>
-                        <p id = 'rem'>remove</p>
+                        <p class = 'rem' onclick = 'rems();'>remove</p>
                     </div>
                 </div>
             </div>
@@ -656,6 +656,24 @@
                 </div>
             </div>
         </div>
+        <script>
+            function rems(e) {
+                e = window.event;
+                const src = 'https://raw.githubusercontent.com/freelancer2020/e-shop/master/shopping-cart.jpg';
+                const table = document.getElementsByClassName('cart-content')[0];
+                const tableBottom = document.getElementsByClassName('part-bottom')[0];
+              
+              if (table.children.length <= 7) {
+                let bright = document.createElement('img');
+                    bright.src = src;
+                    bright.classList.add('back');
+                    table.append(bright);
+                    tableBottom.remove();
+              }
+              e.target.parentElement.parentElement.parentElement.parentElement.remove();
+            }
+            
+        </script>
         <style>
             .checkout-container {
                 width: 80%;
@@ -664,6 +682,7 @@
                 justify-content: space-around;
                 border: 1px solid;
                 border-radius: 3px;
+                transition: 0.5 ease-out;
             }
             .left-side {
                 width: 45%;
@@ -710,7 +729,7 @@
                 font-family: 'Alegreya Sans';
 
             }
-            #rem {
+            .rem {
                 margin-left: 5px;
                 cursor: pointer;
                 color: #C7C6C4;

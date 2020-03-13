@@ -115,11 +115,16 @@ window.onload = function() {
     const myData = JSON.parse(localStorage.getItem('data'));
     cartItemsCounter.textContent = myData.length;
 
-    const tem = document.getElementById('checkout').content.cloneNode(true);
+   
     
     cartContent.children[0].remove();
-    cartContent.append(tem);
+    
+    let i = 3;
+    for (let x = 0; x < i; x++) {
+        const tem = document.getElementById('checkout').content.cloneNode(true);
+        cartContent.append(tem);
 
+    }
 }
 
 
@@ -336,3 +341,7 @@ function addDataToCart(e) {
 
 const cartBtn = document.getElementsByClassName('cart-btn')[0]
 cartBtn.onclick = addDataToCart;
+
+function teh() {
+    alert("hi");
+}
