@@ -860,10 +860,13 @@ header {
     margin-top: 150px;
     overflow: auto;
     display: none;
+<<<<<<< HEAD
 }
 .openCarta {
     display: flex;
     flex-direction: column;
+=======
+>>>>>>> 29fa1dee5d6134fcd22cb6a18492e1869ad0e681
 }
 .cart-header {
     width: 100%;

@@ -119,7 +119,11 @@ window.onload = function() {
    // localStorage.removeItem('data');
 
    
+<<<<<<< HEAD
    /*
+=======
+    /*
+>>>>>>> 29fa1dee5d6134fcd22cb6a18492e1869ad0e681
     cartContent.children[0].remove();
     
     let i = 3;
@@ -129,8 +133,11 @@ window.onload = function() {
 
     }
     */
+<<<<<<< HEAD
     
     
+=======
+>>>>>>> 29fa1dee5d6134fcd22cb6a18492e1869ad0e681
 }
 
 
@@ -353,6 +360,7 @@ function addDataToCart(e) {
 }
 
 
+<<<<<<< HEAD
 //const cartBtn = document.getElementsByClassName('cart-btn')[0];
 //cartBtn.onclick = addDataToCart;
 
@@ -367,3 +375,8 @@ function openCart() {
 
 const userCartBtn = document.getElementsByClassName('head-item-btn')[0];
 userCartBtn.addEventListener('click', openCart, false);
+=======
+function teh() {
+    alert("hi");
+}
+>>>>>>> 29fa1dee5d6134fcd22cb6a18492e1869ad0e681
