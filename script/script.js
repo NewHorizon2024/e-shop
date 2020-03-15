@@ -97,6 +97,7 @@ function loadMainbProducts() {
                 arr[i].describtion = `There is no description found in the database.`;
             }
             productImage[i].desc = arr[i].describtion; // describtion test
+            
        }
     })
     .catch(err => alert(err.message));
@@ -116,7 +117,7 @@ window.onload = function() {
     */
     const myData = JSON.parse(localStorage.getItem('data'));
     cartItemsCounter.textContent = myData.length;
-    //localStorage.removeItem('data');
+    localStorage.removeItem('data');
 
    
    /*
@@ -287,6 +288,7 @@ function trial(e) {
     boardInfo.product_name = $productName;
     boardInfo.product_price = $prodcutPrice;
     boardInfo.product_src = $productImage;
+    boardInfo.product_describtion = e.target.describtion;// updated
    
     const fullB = document.getElementsByClassName('item-board')[0];
     const templateItemBoard = document.getElementById('item-board-control').content.cloneNode(true);
@@ -297,6 +299,7 @@ function trial(e) {
         const myPrice = document.getElementsByClassName('price')[0];
         const des = document.getElementById('item-describution');
         des.innerHTML = e.target.desc;
+        boardInfo.product_describtion = e.target.desc;
         myPrice.textContent = $prodcutPrice;
 
     }, 0);
@@ -389,6 +392,7 @@ function openShoppingCart() {
         show_quantity.textContent = current_data[i].product_quantity;
         const show_image = document.getElementsByClassName('check-image')[i];
         show_image.src = current_data[i].product_src;
+        
        
     }
 
