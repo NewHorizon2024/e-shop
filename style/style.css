@@ -850,8 +850,6 @@ header {
 .shopping-cart-container {
     width: 60vw;
     height: auto;
-    display: flex;
-    flex-direction: column;
     position: fixed;
     margin: auto;
     left: 0;
@@ -861,6 +859,11 @@ header {
     z-index: 11;
     margin-top: 150px;
     overflow: auto;
+    display: none;
+}
+.openCarta {
+    display: flex;
+    flex-direction: column;
 }
 .cart-header {
     width: 100%;
