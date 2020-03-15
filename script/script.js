@@ -116,14 +116,10 @@ window.onload = function() {
     */
     const myData = JSON.parse(localStorage.getItem('data'));
     cartItemsCounter.textContent = myData.length;
-   // localStorage.removeItem('data');
+    //localStorage.removeItem('data');
 
    
-<<<<<<< HEAD
    /*
-=======
-    /*
->>>>>>> 29fa1dee5d6134fcd22cb6a18492e1869ad0e681
     cartContent.children[0].remove();
     
     let i = 3;
@@ -133,11 +129,8 @@ window.onload = function() {
 
     }
     */
-<<<<<<< HEAD
     
     
-=======
->>>>>>> 29fa1dee5d6134fcd22cb6a18492e1869ad0e681
 }
 
 
@@ -360,23 +353,50 @@ function addDataToCart(e) {
 }
 
 
-<<<<<<< HEAD
-//const cartBtn = document.getElementsByClassName('cart-btn')[0];
-//cartBtn.onclick = addDataToCart;
+function openShoppingCart() {
+    //step #1
+    const carta = document.getElementsByClassName('shopping-cart-container')[0];
+    carta.classList.add('openCarta');
+    appLight.classList.add('dark');
+    //************************** */
 
-function openCart() {
-    //alert("hi");
-   const cartContent = document.getElementsByClassName("shopping-cart-container")[0];
-   cartContent.classList.add('openCarta');
-   appLight.classList.add('dark');
+    //step #2
+    if (localStorage.getItem('data') == null) {
+        const cartContent = document.getElementsByClassName("cart-content")[0];
+        const bottom = document.getElementsByClassName('part-bottom')[0];
+        const head_cart = document.getElementsByClassName('your-cart')[0];
+        head_cart.textContent = 'Your Cart is empty';
+        bottom.style.display = 'none';
+        const back = document.createElement('img');
+        back.src = 'https://raw.githubusercontent.com/freelancer2020/e-shop/master/shopping-cart.jpg';
+        cartContent.append(back);
+        back.style.width = "200px";
+        back.style.height = "200px";
+    }
+
+    const current_data = JSON.parse(localStorage.getItem('data'));
+    for (let i = 0; i < current_data.length; i++) {
+        const checkout_template = document.getElementById('checkout').content.cloneNode(true);
+        const targ = document.getElementsByClassName('cart-content')[0];
+        targ.append(checkout_template);
+        const show_name = document.getElementsByClassName('check-name')[i];
+        show_name.textContent = current_data[i].product_name;
+        const show_price = document.getElementsByClassName('check-price')[i];
+        show_price.textContent = current_data[i].product_price;
+        const show_des = document.getElementsByClassName('check-des')[i];
+        show_des.textContent = current_data[i].product_describtion;
+        const show_quantity = document.getElementsByClassName('check-quantity')[i];
+        show_quantity.textContent = current_data[i].product_quantity;
+        const show_image = document.getElementsByClassName('check-image')[i];
+        show_image.src = current_data[i].product_src;
+       
+    }
 
 }
 
 
-const userCartBtn = document.getElementsByClassName('head-item-btn')[0];
-userCartBtn.addEventListener('click', openCart, false);
-=======
-function teh() {
-    alert("hi");
-}
->>>>>>> 29fa1dee5d6134fcd22cb6a18492e1869ad0e681
+
+
+
+const userChartBtn = document.getElementsByClassName('head-item-btn')[0];
+userChartBtn.addEventListener('click', openShoppingCart, false);
