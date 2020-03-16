@@ -326,7 +326,7 @@ function addDataToCart(e) {
             product_describtion: boardInfo.product_describtion
         };
        
-        let [currentData, oldData, fullData, trackData] = [[], [], [], true];
+        let [currentData, oldData, fullData,] = [[], [], []];
         
         const tech = localStorage.getItem('data');
         if (tech == null) {
@@ -339,9 +339,6 @@ function addDataToCart(e) {
             oldData = initOldData;
             currentData.push(dataObj);
             fullData = oldData.concat(currentData);
-            trackData = fullData.length - initOldData.length;//*** */
-            localStorage.setItem('counter', JSON.stringify(trackData));//** */
-            
             localStorage.setItem('data', JSON.stringify(fullData)); 
         }
         let cartItemsCounter = document.getElementsByClassName('items-num')[0];
@@ -353,10 +350,6 @@ function addDataToCart(e) {
         }
         chart.style.display = 'none';
         appLight.classList.remove('dark');
-            
-        
-
-        
     
     } catch(err) {
         alert(err.message);
@@ -371,6 +364,8 @@ function openShoppingCart() {
     const cartContent = document.getElementsByClassName("cart-content")[0];
     const bottom = document.getElementsByClassName('part-bottom')[0];
     const head_cart = document.getElementsByClassName('your-cart')[0];
+    const userTotal = document.getElementsByClassName('sub-total')[0];
+    let sum = 0;
     carta.classList.add('openCarta');
     appLight.classList.add('dark');
     //************************** */
@@ -394,6 +389,7 @@ function openShoppingCart() {
         const current_data = JSON.parse(localStorage.getItem('data'));
 
     for (let i = 0; i < current_data.length; i++) {
+        num += Number(parseFloat(current_data[i].product_price.replace(/\$/g, '')));
         bottom.style.display = 'flex';
         const checkout_template = document.getElementById('checkout').content.cloneNode(true);
         const targ = document.getElementsByClassName('cart-content')[0];
@@ -409,28 +405,8 @@ function openShoppingCart() {
         const show_image = document.getElementsByClassName('check-image')[i];
         show_image.src = current_data[i].product_src;
     }
-
-
-
-    /*
-
-    for (let i = 0; i < current_data.length; i++) {
-        bottom.style.display = 'flex';
-        const checkout_template = document.getElementById('checkout').content.cloneNode(true);
-        const targ = document.getElementsByClassName('cart-content')[0];
-        targ.append(checkout_template);
-        const show_name = document.getElementsByClassName('check-name')[i];
-        show_name.textContent = current_data[i].product_name;
-        const show_price = document.getElementsByClassName('check-price')[i];
-        show_price.textContent = current_data[i].product_price;
-        const show_des = document.getElementsByClassName('check-des')[i];
-        show_des.textContent = current_data[i].product_describtion;
-        const show_quantity = document.getElementsByClassName('check-quantity')[i];
-        show_quantity.textContent = current_data[i].product_quantity;
-        const show_image = document.getElementsByClassName('check-image')[i];
-        show_image.src = current_data[i].product_src;
-    }
-    */
+    userTotal.textContent  = num.toFixed(3);
+    
 
 }
 
