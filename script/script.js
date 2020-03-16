@@ -117,7 +117,7 @@ window.onload = function() {
     */
     const myData = JSON.parse(localStorage.getItem('data'));
     cartItemsCounter.textContent = myData.length;
-    localStorage.removeItem('data');
+   // localStorage.removeItem('data');
 
    
    /*
